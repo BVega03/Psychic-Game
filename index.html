@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Psychic Game</title>
+    <!-- Added link to the css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Added link to the Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+
+    <h1>Vega's Lame Psychic Game</h1>
+
+    <p></p>
+    <div>
+        <p id="directions-text">Press any letter a-z to start!</p>
+        <p id="userchoice-text"></p>
+        <p id="computerchoice-text"></p>
+        <p id="wins-text"></p>
+        <p id="losses-text"></p>
+
+    </div>
+
+    <script type="text/javascript">
+        var targetNumber = 10;
+        var targetNumberL = 100;
+
+
+        var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r",
+            "s", "t", "u", "v", "w", "x", "y", "z"
+        ];
+
+        var wins = 0;
+        var losses = 0;
+
+
+        var directionsText = document.getElementById("directions-text");
+        var userChoiceText = document.getElementById("userchoice-text");
+        var computerChoiceText = document.getElementById("computerchoice-text");
+        var winsText = document.getElementById("wins-text");
+        var lossesText = document.getElementById("losses-text");
+
+        document.onkeyup = function (event) {
+
+
+            var userGuess = event.key;
+
+            var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+            // I know this is not the most efficient but until I advance in more efficient code and figure out other ways, I thought this would at least get it to work.
+            if (
+                (userGuess === "a") ||
+                (userGuess === "b") ||
+                (userGuess === "c") ||
+                (userGuess === "d") ||
+                (userGuess === "e") ||
+                (userGuess === "f") ||
+                (userGuess === "g") ||
+                (userGuess === "h") ||
+                (userGuess === "i") ||
+                (userGuess === "j") ||
+                (userGuess === "k") ||
+                (userGuess === "l") ||
+                (userGuess === "m") ||
+                (userGuess === "n") ||
+                (userGuess === "o") ||
+                (userGuess === "p") ||
+                (userGuess === "q") ||
+                (userGuess === "r") ||
+                (userGuess === "s") ||
+                (userGuess === "t") ||
+                (userGuess === "u") ||
+                (userGuess === "v") ||
+                (userGuess === "w") ||
+                (userGuess === "x") ||
+                (userGuess === "y") ||
+                (userGuess === "z"))
+
+            {
+                if ((userGuess !== computerGuess)) {
+                    losses++;
+                } else if ((userGuess === computerGuess)) {
+                    wins++;
+
+            //Couldn't get these to run so that if user sees the pattern of letters, they are guaranteed a win. 
+                } else if ((userGuess === "v")) {
+                    wins++;
+                } else if ((userGuess === "e")) {
+                    wins++;
+                } else if ((userGuess === "g")) {
+                    wins++;
+                } else if ((userGuess === "a")) {
+                    wins++;
+                } else if ((userGuess === "s")) {
+                    wins++;
+                }
+                
+
+                directionsText.textContent = "";
+
+                userChoiceText.textContent = "You chose: " + userGuess;
+                computerChoiceText.textContent = "The computer chose: " + computerGuess;
+                winsText.textContent = "wins: " + wins;
+                lossesText.textContent = "losses: " + losses;
+
+            }
+
+            {
+                if (wins === targetNumber) {
+                    alert("You did it! Your prize is you never have to play again! Until the game creator gets in touch with their creativity and is able make this game more appealing, you will never have to open this app again. Cheers! ");
+                } else if (losses === targetNumberL) {
+                    alert("100 losses?! Yikes! Keep going or refresh the page!");
+                } else if (losses === targetNumberL) {
+                    alert("150 losses?! Stop now, this game is rigged!");
+                }
+        }};
+    </script>
+
+</body>
+
+</html>
