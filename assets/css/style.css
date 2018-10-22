@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+/*Not linking to Google Fonts??*/
+    /* font-family: 'Oswald', sans-serif;
+    font-family: 'Diplomata', cursive;
+    font-family: 'BenchNine', sans-serif; */
+}
+
+h1 {
+    text-align: center;
+    background-color: green;
+    color: white;
+    opacity: 30px;
+
+}

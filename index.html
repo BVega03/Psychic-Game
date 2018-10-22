@@ -12,6 +12,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Added link to the Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Added link to the GoogleFonts -->    
+    <link href="https://fonts.googleapis.com/css?family=BenchNine|Diplomata|Oswald" rel="stylesheet">
 
 
 </head>
@@ -31,8 +33,10 @@
     </div>
 
     <script type="text/javascript">
-        var targetNumber = 10;
+        var targetNumber = 7;
         var targetNumberL = 100;
+        var targetNumberL1 = 150;
+        var targetNumberL2 = 200;
 
 
         var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r",
@@ -116,11 +120,13 @@
 
             {
                 if (wins === targetNumber) {
-                    alert("You did it! Your prize is you never have to play again! Until the game creator gets in touch with their creativity and is able make this game more appealing, you will never have to open this app again. Cheers! ");
+                    alert("You did it! Your prize is you never have to play again! Until the game creator gets in touch with their creative side and is able make this game more appealing, you will never have to open this app again. Cheers! ");
                 } else if (losses === targetNumberL) {
                     alert("100 losses?! Yikes! Keep going or refresh the page!");
-                } else if (losses === targetNumberL) {
+                } else if (losses === targetNumberL1) {
                     alert("150 losses?! Stop now, this game is rigged!");
+                } else if (losses === targetNumberL2) {
+                    alert("200 losses?! Sorry, you can't have any of your time back.");
                 }
         }};
     </script>
