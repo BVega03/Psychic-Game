@@ -1,5 +1,10 @@
+
 body {
     text-align: center;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    margin: 0 auto 0 auto;
+
 /*Not linking to Google Fonts??*/
     /* font-family: 'Oswald', sans-serif;
     font-family: 'Diplomata', cursive;
@@ -8,8 +13,27 @@ body {
 
 h1 {
     text-align: center;
+    position: relative;
     background-color: green;
     color: white;
-    opacity: 30px;
 
 }
+
+img {
+    height: 500px;
+    width: 700px;
+}
+
+
+@media (min-device-width:600px) {
+    img[data-src-600px] {
+        content: attr(data-src-600px, url);
+    }
+}
+@media (min-device-width:800px) {
+    img[data-src-800px] {
+        content: attr(data-src-800px, url);
+    }
+}
+
+

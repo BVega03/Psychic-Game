@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Added link to the Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <!-- Added link to the GoogleFonts -->    
+    <!-- Added link to the GoogleFonts -->
     <link href="https://fonts.googleapis.com/css?family=BenchNine|Diplomata|Oswald" rel="stylesheet">
 
 
@@ -22,14 +22,15 @@
 
     <h1>Vega's Lame Psychic Game</h1>
 
-    <p></p>
-    <div>
-        <p id="directions-text">Press any letter a-z to start!</p>
-        <p id="userchoice-text"></p>
-        <p id="computerchoice-text"></p>
-        <p id="wins-text"></p>
-        <p id="losses-text"></p>
+    <img src="assets/images/Einstein_1.jpg" data-src-600px="image-600px.jpg" data-src-800px="image-800px.jpg" alt="">
 
+    <div><strong>
+            <p id="directions-text">Press any letter a-z to start!</p>
+            <p id="userchoice-text"></p>
+            <p id="computerchoice-text"></p>
+            <p id="wins-text"></p>
+            <p id="losses-text"></p>
+        </strong>
     </div>
 
     <script type="text/javascript">
@@ -95,7 +96,7 @@
                 } else if ((userGuess === computerGuess)) {
                     wins++;
 
-            //Couldn't get these to run so that if user sees the pattern of letters, they are guaranteed a win. 
+                    //Couldn't get these to run so that if user sees the pattern of letters, they are guaranteed a win. 
                 } else if ((userGuess === "v")) {
                     wins++;
                 } else if ((userGuess === "e")) {
@@ -107,7 +108,7 @@
                 } else if ((userGuess === "s")) {
                     wins++;
                 }
-                
+
 
                 directionsText.textContent = "";
 
@@ -120,7 +121,9 @@
 
             {
                 if (wins === targetNumber) {
-                    alert("You did it! Your prize is you never have to play again! Until the game creator gets in touch with their creative side and is able make this game more appealing, you will never have to open this app again. Cheers! ");
+                    alert(
+                        "You did it! Your prize is you never have to play again! Until the game creator gets in touch with their creative side and is able make this game more appealing, you will never have to open this app again. Cheers! "
+                    );
                 } else if (losses === targetNumberL) {
                     alert("100 losses?! Yikes! Keep going or refresh the page!");
                 } else if (losses === targetNumberL1) {
@@ -128,7 +131,8 @@
                 } else if (losses === targetNumberL2) {
                     alert("200 losses?! Sorry, you can't have any of your time back.");
                 }
-        }};
+            }
+        };
     </script>
 
 </body>

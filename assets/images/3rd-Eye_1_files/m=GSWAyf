@@ -1,6 +1,0 @@
-try{
-s_A("GSWAyf");
-
-s_z();
-}catch(e){_DumpException(e)}
-// Google Inc.

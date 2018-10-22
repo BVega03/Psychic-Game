@@ -1,6 +1,0 @@
-try{
-s_A("FBWYne");
-
-s_z();
-}catch(e){_DumpException(e)}
-// Google Inc.
